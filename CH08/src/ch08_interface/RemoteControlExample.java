@@ -4,15 +4,20 @@ package ch08_interface;
 public class RemoteControlExample {
 
 	public static void main(String[] args) {
+		//static 메소드, 객체 생성 없이 바로 호출 가능
+		RemoteControl.changeBattery();
+		
 		RemoteControl rc; //인터페이스 변수 생성
 		rc = new Television(); //인터페이스 변수에 구현 객체 대입
 		
 		rc.turnOn();
 		rc.turnOff();
+		rc.setMute(true);
 		
 		rc = new Audio();
 		rc.turnOn();
 		rc.turnOff();
+		rc.setMute(true); //재정의한 default 메소드
 		//rc.turn(); 인터페이스에 정의된 메소드에만 접근 가능
 		
 		

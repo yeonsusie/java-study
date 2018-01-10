@@ -29,6 +29,16 @@ public class Audio implements RemoteControl{
 		System.out.println("泅犁 audio 杭俘: " + this.volume);
 	}
 	
+	@Override
+	public void setMute(boolean mute){
+		if(mute){
+			System.out.println("audio 公澜贸府");
+		}
+		else {
+			System.out.println("audio 公澜贸府 秦力");
+		}
+	}
+	
 	public void turn(){
 		System.out.println("turn");
 	}
